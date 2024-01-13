@@ -1,0 +1,66 @@
+spring:
+  application:
+    name: shrp-backend-master
+  # 默认 dev 环境
+  profiles:
+    active: dev
+  # 支持 swagger3
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  # 数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/my_db
+    username: user1
+    password: 123456
+  # 文件上传
+  servlet:
+    multipart:
+      # 大小限制
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: sxy
+    password: 123456
+  mail:
+    host: smtp.qq.com
+    port: 587
+    username: 373363602@qq.com
+    password: vfxunoxpnpyicafa
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+server:
+  # address: 0.0.0.0
+  port: 8081
+# 对象存储
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+cos:
+  client:
+    accessKey: AKIDjKirmSu7AzZyCF4e0HMEqFSTEr2D9rKY
+    secretKey: 34vgDXeYHn7E1av0pRr2znMnGYgePgqo
+    region: ap-beijing
+    bucket: mybucket123-1322853457
+panel:
+  mapping:
+    global:
+      aurv2: fileName1
+      ov4: fileName2
+    europe:
+      aurv2: \Europe750.BeaglePhase_AN.AC\Europe750.chr%s.BeaglePhase_AN.ACsnpvcf.gz
+      ov4: fileName2
+    africa:
+      aurv2: \Africa489.BeaglePhase_AN.AC\Africa489.chr%s.BeaglePhase_AN.ACsnpvcf.gz
+      ov4: fileName2
+    asia:
+      aurv2: \Asia1434.BeaglePhase_AN.AC\Asia1434.chr%s.BeaglePhase_AN.ACsnpvcf.gz
+      ov4: fileName2
+

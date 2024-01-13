@@ -1,0 +1,18 @@
+package nwafu.cie.shrp.mapper;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import nwafu.cie.shrp.model.entity.Project;
+
+/**
+* @author Xiao
+* @description 针对表【basic_project(工程)】的数据库操作Mapper
+* @createDate 2023-12-01 11:56:43
+* @Entity generator.domain.Project
+*/
+public interface ProjectMapper extends BaseMapper<Project> {
+
+}
+
+
+
+
